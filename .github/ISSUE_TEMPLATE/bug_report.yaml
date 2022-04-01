@@ -30,7 +30,7 @@ body:
     validations:
       required: true
   - type: textarea
-    id: report-output
+    id: additional-output
     attributes:
       label: Additional information
       description: |
