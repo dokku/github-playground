@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        If you need help figuring out how to use a specific buildpack, are seeing an issue in during the buildpack process, or are having issues using multiple buildpacks, please see our chat channels or github discussion board. Issues pertaining to buildpacks may be closed and locked.
+        > If you need help figuring out how to use a specific buildpack, are seeing an issue in during the buildpack process, or are having issues using multiple buildpacks, please see our chat channels or github discussion board. Issues pertaining to buildpacks may be closed and locked.
   - type: textarea
     id: description
     attributes:
