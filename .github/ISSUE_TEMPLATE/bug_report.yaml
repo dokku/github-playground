@@ -3,12 +3,6 @@ name: Bug Report
 description: File a bug report
 labels: ["needs: investigation", "type: bug"]
 body:
-  - type: markdown
-    attributes:
-      value: |
-        > If you need help figuring out how to use a specific buildpack, are seeing an issue during the buildpack process, or are having issues using multiple buildpacks, please see our [monitored support channels such as Discord, Slack, or Github Discussions](https://dokku.com/docs/getting-started/where-to-get-help/#monitored-locations).
-        > 
-        > Issues pertaining to buildpacks may be closed and locked.
   - type: textarea
     id: description
     attributes:
@@ -53,7 +47,14 @@ body:
   - type: textarea
     id: logs
     attributes:
-      label: "Output of failing Dokku commands after running: dokku trace:on"
+      label: "Output of failing commands after running: dokku trace:off"
+      render: shell
+    validations:
+      required: false
+  - type: textarea
+    id: trace-logs
+    attributes:
+      label: "Output of failing commands after running: dokku trace:on"
       description: |
         **BEWARE**: `dokku trace:on` will cause some commands to print environment variables, be sure you're not exposing any sensitive information when posting issues. You may replace these values with XXXXXX
       render: shell
