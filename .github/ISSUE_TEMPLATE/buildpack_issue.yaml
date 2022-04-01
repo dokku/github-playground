@@ -11,8 +11,9 @@ body:
         Debugging tips:
         
         - If you see text that says `Killed` in your output, attempt to increase free memory by using a larger server or [add swap memory](https://dokku.com/docs/getting-started/troubleshooting/#build-fails-with-killed-message).
-        - If your build stalls while downloading a file needed by a buildpack, your hosting provider may have issues accessing AWS S3. Verify the file can be downloaded directly on the host in question.
-        - If the buildpack is downloading a file and the file is too slow to download or is blocked by your hosting provider for some reason, see if you can specify an alternative location for the file url as a configuration variable. Many buildpacks offer this as options, or you can fork the buildpack to do so yourself.
+        - Turn on buildpack trace mode via `dokku config:set $APP_NAME BUILDPACK_XTRACE=1` and retry your deploy. Not all buildpacks support this, but many will output extra debugging information.
+        - Your hosting provider may have issues accessing AWS S3. Verify a slow/stalled download works by directly curling the file from your host.
+        - Many buildpacks allow downloading a file from an alternative location specified via environment variable.
         - [Increase curl timeouts](https://dokku.com/docs/getting-started/troubleshooting/#deployment-fails-because-of-slow-internet-connection-messages-s) if you see gzip download issues.
         - If using multi-buildpack support but a buildpack is failing to apply, ensure you have any files necessary for the `bin/detect` script of the buildpack to `exit 0`. Selected buildpacks must still pass the detection phase in order to be used.
         
