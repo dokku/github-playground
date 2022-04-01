@@ -19,9 +19,7 @@ body:
         - If using multi-buildpack support but a buildpack is failing to apply, ensure you have any files necessary for the `bin/detect` script of the buildpack to `exit 0`. Selected buildpacks must still pass the detection phase in order to be used.
         </details>
 
-        If you are still having issues, the Dokku project recommends filing a ticket here (for tracking purposes) and then further discussing the ticket in one of our [Monitored Support Channels](https://dokku.com/docs/getting-started/where-to-get-help/#monitored-locations) (Discord, Github Discussions, Slack). Your filed ticket may be closed or locked, but any subsequent discovery will be posted to the ticket for posterity.
-
-        Regardless of whether another buildpack ticket describes your issue or not, we would prefer you file a new ticket in order to ensure the actual problem is not masked, and the issue is tracked as appropriate.
+        If you are still having issues, file a ticket here and then further discussing the ticket in one of our [Monitored Support Channels](https://dokku.com/docs/getting-started/where-to-get-help/#monitored-locations) (Discord, Github Discussions, Slack). Your filed ticket may be closed or locked, but any subsequent discovery will be posted to the ticket for posterity.
   - type: textarea
     id: description
     attributes:
